@@ -1,0 +1,53 @@
+:root {
+  --accent: #d63e5a;   /* the pink-red link color; change to taste */
+  --text: #222;
+  --rule: #ccc;
+}
+
+body {
+  max-width: 44rem;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+/* header: name left, nav right, double rule below */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 1rem;
+  border-bottom: 3px double var(--rule);
+}
+header .name { color: var(--text); font-size: 1.4rem; }
+nav a { margin: 0 0.25rem; }
+
+/* centered intro, double rule below */
+main {
+  text-align: center;
+  padding: 2.5rem 0;
+  border-bottom: 3px double var(--rule);
+  font-size: 1.5rem;
+}
+main p { margin: 0 0 1.5rem; }
+
+footer {
+  text-align: center;
+  padding-top: 1.5rem;
+  font-style: italic;
+}
+
+/* stack the header on phones */
+@media (max-width: 600px) {
+  header { flex-direction: column; gap: 0.5rem; }
+  main { font-size: 1.25rem; }
+}
