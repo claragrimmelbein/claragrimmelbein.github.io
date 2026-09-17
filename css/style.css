@@ -3,6 +3,7 @@
   --text: #222;
   --rule: #ccc;
   --muted: #777;       /* dates, blurb, "Posted on" line */
+  --desc: #444;        /* resume descriptions */
 }
 
 body {
@@ -64,9 +65,8 @@ footer {
 .entry h3, .entry a { margin: 0; font-size: 1.15rem; font-weight: normal; }
 .date { color: var(--muted); white-space: nowrap; }
 
-
-/* resume */
-.resume { font-size: 1.05rem; }
+/* resume — <main class="page resume"> */
+main.resume { font-size: 1.05rem; }
 .resume h1 { font-size: 2rem; margin-bottom: 0.25rem; }
 .resume .pdf { display: block; margin-bottom: 2rem; }
 
@@ -84,7 +84,7 @@ footer {
 .resume .desc {
   font-size: 0.95rem;
   line-height: 1.5;
-  color: #444;
+  color: var(--desc);
   margin: 0.2rem 0 0;
 }
 
