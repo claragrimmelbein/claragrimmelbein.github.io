@@ -1,7 +1,8 @@
 :root {
-  --accent: #d63e5a;   /* the pink-red link color; change to taste */
+  --accent: #2f6db5;   /* muted steel blue; alternatives: #1f5fa8 (navy), #3b7dd8 (brighter) */
   --text: #222;
   --rule: #ccc;
+  --muted: #777;       /* dates, blurb, "Posted on" line */
 }
 
 body {
@@ -31,7 +32,7 @@ header {
 header .name { color: var(--text); font-size: 1.4rem; }
 nav a { margin: 0 0.25rem; }
 
-/* centered intro, double rule below */
+/* homepage: centered intro, double rule below */
 main {
   text-align: center;
   padding: 2.5rem 0;
@@ -40,14 +41,44 @@ main {
 }
 main p { margin: 0 0 1.5rem; }
 
+/* every other page: left-aligned, normal size */
+main.page {
+  text-align: left;
+  font-size: inherit;
+  border-bottom: none;
+}
+
 footer {
   text-align: center;
   padding-top: 1.5rem;
   font-style: italic;
 }
 
+/* shared: title left, date right — projects, awards, blog index */
+.entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.entry h3, .entry a { margin: 0; font-size: 1.15rem; font-weight: normal; }
+.date { color: var(--muted); white-space: nowrap; }
+
+/* blog index */
+.blurb { color: var(--muted); font-style: italic; margin: -0.25rem 0 2rem; }
+.post-item { margin-bottom: 1.75rem; }
+.summary { font-style: italic; margin: 0.15rem 0 0; }
+
+/* blog post */
+.post h1 { font-size: 2.6rem; line-height: 1.1; margin-bottom: 0.25rem; }
+.posted { color: var(--muted); margin-top: 0; }
+.toc { display: flex; flex-direction: column; margin: 1.5rem 0; }
+.toc .sub { padding-left: 1.75rem; }
+
 /* stack the header on phones */
 @media (max-width: 600px) {
   header { flex-direction: column; gap: 0.5rem; }
   main { font-size: 1.25rem; }
+  .entry { flex-direction: column; gap: 0; }
+  .post h1 { font-size: 2rem; }
 }
