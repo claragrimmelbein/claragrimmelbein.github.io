@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>projects · clara grimmelbein</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
 
+  <header>
+    <a class="name" href="../index.html">clara grimmelbein</a>
+    <nav>
+      <a href="../index.html">home</a>
+      <a href="../resume/resume.html">resume</a>
+      <a href="../blog/index.html">blog</a>
+      <a href="index.html" class="active">projects</a>
+    </nav>
+  </header>
+
+  <main class="page">
+
+    <h1>Projects</h1>
+    <p class="blurb">Things I've built, with the write-ups and code behind them.</p>
+
+    <div class="post-list">
+
+      <div class="post-item">
+        <div class="post-head">
+          <a href="tiktok-thesis.html">The Limits of Temporal Prediction in Short-Form Video</a>
+          <span class="date">2025 – 2026</span>
+        </div>
+        <p class="summary">Distinguished Major thesis. A custom Transformer encoder in PyTorch trained on 7 years of my own TikTok interaction data (114k+ events) to predict watch time — benchmarked against linear and mean baselines, with SHAP attribution to diagnose overfitting. Reached 7.97s MAE on high-frequency usage and found a predictability gradient that scales with intensity, which I read as evidence for variable reinforcement over engagement-signal optimization.</p>
+        <p class="links">
+          <a href="../files/dmp.pdf">thesis (pdf)</a> ·
+          <a href="https://github.com/claragrimmelbein/REPO">code</a> ·
+          <a href="../blog/posts/first-post.html">blog post</a>
+        </p>
+      </div>
+
+      <div class="post-item">
+        <div class="post-head">
+          <a href="mediaite.html">MediAIte: LLM Mediation for Legal Disputes</a>
+          <span class="date">2026</span>
+        </div>
+        <p class="summary">An extension of DeepMind's Habermas Machine for an AI &amp; Law seminar, applied to a mock premises-liability dispute. Swapped in a custom Poe-hosted mediator model against a GPT-4 baseline; the pipeline runs chain-of-thought generation, LLM ranking, and Schulze aggregation across opinion and critique rounds to converge on a statement both parties accept.</p>
+        <p class="links">
+          <a href="../files/mediaite-paper.pdf">paper (pdf)</a> ·
+          <a href="https://github.com/claragrimmelbein/REPO">code</a>
+        </p>
+      </div>
+
+      <div class="post-item">
+        <div class="post-head">
+          <a href="italian-markets.html">Italian Financial Market Intelligence</a>
+          <span class="date">2025</span>
+        </div>
+        <p class="summary">Full-stack app — React frontend, Django backend — that applies NLP to Italian-language financial news and company reports to surface market trends. Built partly as an excuse to combine the CS and Italian halves of my degree.</p>
+        <p class="links">
+          <a href="https://github.com/claragrimmelbein/REPO">code</a>
+        </p>
+      </div>
+
+    </div>
+
+  </main>
+
+</body>
+</html>
